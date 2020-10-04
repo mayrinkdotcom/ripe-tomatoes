@@ -13,6 +13,12 @@ section {
 
 .stars {
     color: orange;
+    margin-bottom: 30px;
+    background-image: white;
+}
+
+.botao-mais-conteudo {
+    margin-top: 20px;
 }
 
 .header {
@@ -30,6 +36,29 @@ section {
 
 .header nav {
     padding: 0px;
+}
+
+.menuMobile {
+    display: none;
+}
+
+.menuMobile > a {
+    color: lightcoral;
+}
+
+.menuMobile div {
+    background-color: #DDD;
+}
+
+#menuToggle, .menuIcon {
+    display: none;
+}
+
+.searchMobile {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 60px;
+    display: none;
 }
 
 .header ul {
@@ -66,15 +95,24 @@ section {
 }
 
 .lancamento {
-    background-color: lightsalmon;
     width: 100%;
-    
+    background-color: lightsalmon;
     border-radius: 8px;
-    /*background-image: linear-gradient(lightblue, lightgreen);*/
 }
 
 .lancamento .carousel-inner {
     padding: 20px;
+}
+
+.lancamento .lancamento-sinopse {
+    overflow: auto;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 .destaque .destaque-card {
@@ -85,13 +123,18 @@ section {
     border: none;
 }
 
-.avaliacoes .data-avaliacoes {
-    font-weight: bolder;
+.avaliacoes .rating-stars {
+    padding: 0px;
 }
 
+.avaliacoes .data-avaliacoes {
+    font-weight: bolder;
+    padding: 0px 0px 0px 15px;
+}
 
 .making-of {
-    background-color: whitesmoke;
+    background-color: lightsalmon;
+    padding: 20px 50px;
     border-radius: 8px;
 }
 
@@ -104,8 +147,6 @@ section {
     border: none;
 }
 
-
-
 .tags {
     border: none;
     padding: 3px 20px;
@@ -116,6 +157,10 @@ section {
 
 .editorial {
     margin: 0;
+    padding: 0;
+}
+
+.editorial p {
     padding: 0;
 }
 
@@ -131,10 +176,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.footer p {
-    margin-left: 250px;
 }
 
 .footer img {

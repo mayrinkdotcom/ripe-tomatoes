@@ -9,39 +9,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
 
 <body>
 
-    <header class="header">
+    <header id="header" class="header">
         <div class="container">
             <div class="row">
-                <span class="col-2"><a href="./index.html"><img class="logo" src="res/logo-ripe-tomatoes.png" alt="Logo Ripe Tomatoes"></a></span>
-                <nav class="col-7">
-                    <ul>
+                <span class="col-5 col-sm-4 col-md-4 col-lg-2"><a href="./index.html"><img class="logo" src="res/logo-ripe-tomatoes.png" alt="Logo Ripe Tomatoes"></a></span>
+                <nav class="col-lg-7">
+                    <input type="checkbox" id="menuToggle">
+                    <label for="menuToggle" class="menuIcon">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times-circle"></i>
+                    </label>
+                    <ul class="menu">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">lançamentos</a>
+                            <a class="nav-link active" href="#lancamento">lançamentos</a>
                         </li>
                         <span> | </span>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">em destaque</a>
+                            <a class="nav-link" href="#destaque">em destaque</a>
                         </li>
                         <span> | </span>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">avaliações</a>
+                            <a class="nav-link" href="#avaliacoes">avaliações</a>
                         </li>
                         <span> | </span>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">entrevistas e making-offs</a>
+                            <a class="nav-link" href="#making-of">entrevistas e making-offs</a>
                         </li>
                         <span> | </span>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">novidades</a>
+                            <a class="nav-link" href="#informativo">novidades</a>
                         </li>
                     </ul>
 
                 </nav>
-                <div class="input-group mb-3 col-3 search-field">
+
+                <div class="dropdown col-3 col-sm-2 col-md-4 menuMobile">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#lancamento">lançamentos</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#destaque">em destaque</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#avaliacoes">avaliações</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#making-of">entrevistas e making-offs</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#informativo">novidades</a>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3 col-sm-6 col-md-4 col-lg-3 search-field">
                     <span class="input-group-text icone-lupa" id="basic-addon1">
                         <i class="fas fa-search"></i>
                     </span>
@@ -51,13 +76,18 @@
                         <i class="far fa-times-circle"></i>
                     </span>
                 </div>
+                <div class="col-3 searchMobile">
+                    <span class="icone-lupa" id="basic-addon1">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
                 
             </div>
         </div>
 
     </header>
 
-    <section class=" lancamento container">
+    <section id="lancamento" class="lancamento container">
         <div class="row">
             <h3 class="col-12 d-flex justify-content-center">Lançamentos</h3>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -69,13 +99,13 @@
                 <div class="carousel-inner row">
                     <div class="carousel-item active col-12">
                         <div class="row">
-                            <iframe class="col-6" width="853" height="400"
+                            <iframe class="col-12 col-sm-12 col-md-6" width="853" height="400"
                                 src="https://www.youtube.com/embed/hfLkFZWFmLM" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
-                            <div class="lancamento-sinopse col-6">
+                            <div class="lancamento-sinopse col-12 col-sm-12 col-md-6">
                                 <h2>Duna</h2>
-                                <p><b>Sinopse:</b> Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático.
+                                <p class="line-clamp"><b>Sinopse:</b> Em um futuro distante, planetas são comandados por casas nobres que fazem parte de um império feudal intergalático.
                                     Paul Atreides (Timothée Chalamet) é um jovem homem cuja família toma controle do planeta deserto Arrakis, também
                                     conhecido como Duna. Sendo a única fonte da especiaria melange, a substância mais importante do cosmos, Arrakis se
                                     prova ser um planeta nem um pouco fácil de governar.</p>
@@ -95,13 +125,13 @@
                     </div>
                     <div class="carousel-item col-12">
                         <div class="row">
-                            <iframe class="col-6" width="853" height="400"
+                            <iframe class="col-12 col-sm-12 col-md-6" width="853" height="400"
                                 src="https://www.youtube.com/embed/G8W-_qqO9-E" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
-                            <div class="lancamento-sinopse col-6">
+                            <div class="lancamento-sinopse col-12 col-sm-12 col-md-6">
                                 <h2>SCOOBY! O Filme</h2>
-                                <p><b>Sinopse:</b> SCOOBY! O Filme é uma história de origem dos famosos personagens da série animada da Hanna Barbera. Salsicha e Scooby
+                                <p class="line-clamp"><b>Sinopse:</b> SCOOBY! O Filme é uma história de origem dos famosos personagens da série animada da Hanna Barbera. Salsicha e Scooby
                                     tem uma conexão instantânea envolvendo comida em seu primeiro encontro, e logo se unem aos jovens detetives Fred,
                                     Velma e Daphne para formar a Mistério S/A. Só que, após resolver centenas de casos, eles encontram o desafio de
                                     impedir o "apocãolipse", que virá quando o fantasma do cão Cerberus for liberado no mundo.</p>
@@ -120,13 +150,13 @@
                     </div>
                     <div class="carousel-item col-12">
                         <div class="row">
-                            <iframe class="col-6" width="853" height="400"
+                            <iframe class="col-12 col-sm-12 col-md-6" width="853" height="400"
                                 src="https://www.youtube.com/embed/NORzSapZfVc" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
-                            <div class="lancamento-sinopse col-6">
+                            <div class="lancamento-sinopse col-12 col-sm-12 col-md-6">
                                 <h2>Bob Esponja: O Incrível Resgate</h2>
-                                <p><b>Sinopse:</b> Em Bob Esponja: O Incrível Resgate, o sumiço de Gary preocupa seu amigo. Segundo Bob Esponja, Gary foi
+                                <p class="line-clamp"><b>Sinopse:</b> Em Bob Esponja: O Incrível Resgate, o sumiço de Gary preocupa seu amigo. Segundo Bob Esponja, Gary foi
                                     "caracolstrado" pelo temível Rei Poseidon e levado para a cidade perdida de Atlantic City. Junto a Patrick Estrela,
                                     ele sai em uma missão de resgate ao querido amigo, e nesta jornada os dois vão conhecer novos personagens e viver
                                     inimagináveis aventuras.</p>
@@ -156,10 +186,10 @@
         </div>
     </section>
 
-    <section class="destaque container">
+    <section id="destaque" class="destaque container">
         <div class="row">
-            <h3 class="col-10">Em destaque</h3>
-            <div class="dropdown col-2">
+            <h3 class="col-8">Em destaque</h3>
+            <div class="dropdown col-4">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Categoria
@@ -173,41 +203,36 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="card col-3 destaque-card" style="width: 18rem;">
+        <div class="row justify-content-center">
+            <div class="card col-10 col-sm-6 col-md-4 col-lg-3 destaque-card" style="width: 18rem;">
                 <img src="res/harry-potter-ordem-da-fenix.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">O quinto ano do bruxo mais famoso das telonas ganha espaço no catálogo da Netflix</p>
                 </div>
             </div>
-            <div class="card col-3 destaque-card" style="width: 18rem;">
+            <div class="card col-10 col-sm-6 col-md-4 col-lg-3 destaque-card" style="width: 18rem;">
                 <img src="res/vantagens-de-ser-invisivel.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">Você conhece esse clássico com Logan Lerman, aclamado pelo público teen?</p>
                 </div>
             </div>
-            <div class="card col-3 destaque-card" style="width: 18rem;">
+            <div class="card col-10 col-sm-6 col-md-4 col-lg-3 destaque-card" style="width: 18rem;">
                 <img src="res/homem-de-ferro.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">Tony Stark é atacado por um novo inimigo, e terá de superar seu maior medo:
+                        o de fracassar.</p>
                 </div>
             </div>
-            <div class="card col-3 destaque-card" style="width: 18rem;">
+            <div class="card col-10 col-sm-6 col-md-4 col-lg-3 destaque-card" style="width: 18rem;">
                 <img src="res/cidades-de-papel.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">Quentin Jacobsen precisará encontrar sua paixão platônica Margo Roth Spiegelman,
+                        interpretada por Cara Delevingne.
+                    </p>
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-end">
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-warning botao-mais-conteudo">
                     <i class="fas fa-plus"></i>
                     Carregar mais vídeos
                 </button>
@@ -215,80 +240,80 @@
         </div>
     </section>
 
-    <section class="avaliacoes container">
+    <section id="avaliacoes" class="avaliacoes container">
         <div class="row">
             <h3 class="col-12">Últimas avaliações</h3>
-            <div class="card mb-3 col-4 card-avaliacao" style="max-width: 540px;">
+            <div class="card mb-3 col-12 col-sm-12 col-md-6 col-lg-4 card-avaliacao" style="max-width: 540px;">
                 <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <span><i class="far fa-user-circle user-icon"></i></span>
+                    <div class="col-2 col-md-1 col-lg-1">
+                        <span><i class="far fa-user-circle fa-3x"></i></span>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-10 col-md-11 col-lg-11">
                         <div class="card-body">
                             <h4 class="card-title">Nome do avaliador</h4>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional
                                 content. This content is a little bit longer.</p>
                             <div class="row avaliacoes-rodape">
-                                <div class="col-6">
+                                <div class="col-5 col-sm-6 rating-stars">
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                 </div>
-                                <p class="data-avaliacoes col-6">02/09/2020</p>
+                                <p class="data-avaliacoes col-5 col-sm-6">02/09/2020</p>
                             </div>
                             
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 col-4 card-avaliacao" style="max-width: 540px;">
+            <div class="card mb-3 col-12 col-sm-12 col-md-6 col-lg-4 card-avaliacao" style="max-width: 540px;">
                 <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <i class="far fa-user-circle user-icon"></i>
+                    <div class="col-2 col-md-1 col-lg-1">
+                        <i class="far fa-user-circle fa-3x"></i>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-10 col-md-11 col-lg-11">
                         <div class="card-body">
                             <h4 class="card-title">Nome do avaliador</h4>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional
                                 content. This content is a little bit longer.</p>
                             <div class="row avaliacoes-rodape">
-                                <div class="col-6">
+                                <div class="col-5 col-sm-6 rating-stars">
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                 </div>
-                                <p class="data-avaliacoes col-6">02/09/2020</p>
+                                <p class="data-avaliacoes col-5 col-sm-6">02/09/2020</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 col-4 card-avaliacao" style="max-width: 540px;">
+            <div class="card mb-3 col-12 col-sm-12 col-md-6 col-lg-4 card-avaliacao" style="max-width: 540px;">
                 <div class="row no-gutters">
-                    <div class="col-md-2">
-                        <i class="far fa-user-circle user-icon"></i>
+                    <div class="col-2 col-md-1 col-lg-1">
+                        <i class="far fa-user-circle fa-3x"></i>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-10 col-md-11 col-lg-11">
                         <div class="card-body">
                             <h4 class="card-title">Nome do avaliador</h4>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional
                                 content. This content is a little bit longer.</p>
                             <div class="row avaliacoes-rodape">
-                                <div class="col-6">
+                                <div class="col-5 col-sm-6 rating-stars">
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                     <span class="fa fa-star stars"></span>
                                 </div>
-                                <p class="data-avaliacoes col-6">02/09/2020</p>
+                                <p class="data-avaliacoes col-5 col-sm-6">02/09/2020</p>
                             </div>
                         </div>
                     </div>
@@ -296,58 +321,52 @@
             </div>
         </div>
         <div class="col-12 d-flex justify-content-end">
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-warning  botao-mais-conteudo">
                 <i class="fas fa-plus"></i>
                 Carregar mais avaliações
             </button>
         </div>
     </section>
 
-    <section class="making-of container">
+    <section id="making-of" class="making-of container">
         <div class="row">
             <h3 class="col-12">Entrevistas & Making-of</h3>
-            <div class="card col-4">
+            <div class="card card-making-of col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                 <iframe src="https://www.youtube.com/embed/XKpnHmqJ6Lg" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">Coringa | Entrevista com o Diretor Todd Phillips | Ingresso.com</p>
                 </div>
             </div>
-            <div class="card col-4">
+            <div class="card card-making-of col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                 <iframe src="https://www.youtube.com/embed/oMkmjg-qZRk" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">Batman | Behind The Scenes of The Dark Knight Trilogy | Warner Bros. Entertainment</p>
                 </div>
             </div>
-            <div class="card col-4">
+            <div class="card card-making-of col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                 <iframe src="https://www.youtube.com/embed/v-pi-bYAWxo" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">The VFX Behind The Enola Holmes Train Sequence | Behind The FX | Netflix Film Club</p>
                 </div>
             </div>
         </div>
         <div class="col-12 d-flex justify-content-end">
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-warning botao-mais-conteudo">
                 <i class="fas fa-plus"></i>
                 Carregar mais vídeos
             </button>
         </div>
     </section>
 
-    <section class="informativo container">
+    <section id="informativo" class="informativo container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-sm-12 col-md-8">
                 <h3>Novidades</h3>
                 <div class="card mb-3 noticias" style="max-width: 600px;">
                     <div class="row no-gutters">
@@ -359,9 +378,9 @@
                                 <h5 class="card-title">The 100: Final da série promove retornos de personagens amados</h5>
                                 <p class="card-text">Saiba o que aconteceu na despedida de Clarke (Eliza Taylor) e seus amigos.</p>
                                 <p class="card-text">
-                                    <button class="tags">hollywood</button>
-                                    <button class="tags">oscar</button>
-                                    <button class="tags">melhor-filme</button>
+                                    <button class="tags">the-100</button>
+                                    <button class="tags">netflix</button>
+                                    <button class="tags">series-teen</button>
                                 </p>
                             </div>
                         </div>
@@ -379,9 +398,9 @@
                                 <p class="card-text">O novo episódio da série de zumbis marca o retorno de Lauren Cohan para o papel de Maggie Greene.
                                 </p>
                                 <p class="card-text">
-                                    <button class="tags">hollywood</button>
-                                    <button class="tags">oscar</button>
-                                    <button class="tags">melhor-filme</button>
+                                    <button class="tags">the-walking-dead</button>
+                                    <button class="tags">estreia</button>
+                                    <button class="tags">zumbis</button>
                                 </p>
                             </div>
                         </div>
@@ -398,23 +417,21 @@
                                 <h5 class="card-title">Zendaya será protagonista de biografia sobre a cantora Ronnie Spector</h5>
                                 <p class="card-text">O longa vai ser produzido pelo estúdio A24, que também é responsável por Euphoria.</p>
                                 <p class="card-text">
-                                    <button class="tags">hollywood</button>
-                                    <button class="tags">oscar</button>
-                                    <button class="tags">melhor-filme</button>
+                                    <button class="tags">zendaya</button>
+                                    <button class="tags">euphoria</button>
+                                    <button class="tags">biografia</button>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="row">
+            <div class="col-12 col-sm-12 col-md-4">
+                <div class="row sobre">
                     <h3>Sobre</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, vitae inventore ut quam culpa fuga sapiente
-                        expedita commodi labore modi dolore, eligendi, alias ratione omnis repellat quas hic voluptas non! Obcaecati iure a
-                        quis minima soluta architecto cupiditate error laborum velit, expedita optio quod quibusdam deserunt officiis
-                        repellat cumque doloribus repudiandae voluptatibus dolores vel odio. In, accusantium rerum illum iste nihil vero
-                        dolore nam repudiandae cum ratione sunt, ipsa nostrum!</p>
+                    <p>Esse Portal de Filmes foi desenvolvido com parte integrante da obtenção de pontos da disciplina de
+                        Desenvolvimento de Interfaces Web, do primeiro período do curso de Engenharia de Software da PUC Minas.
+                    </p>
                 </div>
                 <div class="row">
                     <h3 class="col-12">Editorial</h3>
@@ -429,9 +446,9 @@
                 </div>
                 <div class="row fa-3x">
                     <h3 class="col-12">redes sociais:</h3>
-                    <a href="https://www.facebook.com/joaopedro.mayrink/" class="redes-sociais-icon"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://twitter.com/Mayrinkin" class="redes-sociais-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/mayrink.joao/" class="redes-sociais-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/joaopedro.mayrink/" class="redes-sociais-icon" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/Mayrinkin" class="redes-sociais-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/mayrink.joao/" class="redes-sociais-icon" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -439,7 +456,7 @@
 
     <footer class="footer">
         <p>Copyright 2020 - Disciplina de Desenvonvimento de Interfaces Web - <b>ICEI PUC Minas</b></p>
-        <img src="res/brasaopucminas.png" alt="Brasão PUC Minas">
+        <a href="https://pucminas.br"><img src="res/brasaopucminas.png" alt="Brasão PUC Minas"></a>
     </footer>
 
     <script src="https://kit.fontawesome.com/64f8fb50f9.js" crossorigin="anonymous"></script>
