@@ -101,6 +101,8 @@
               type="text"
               class="form-control"
               placeholder="Pesquisar filme..."
+              aria-label="Username"
+              aria-describedby="basic-addon1"
             />
             <span
               class="input-group-text icone-close"
@@ -118,242 +120,17 @@
       </div>
     </header>
 
-    <section id="lancamento" class="lancamento container">
-      <div class="row">
-        <h3 class="col-12 d-flex justify-content-center">Lançamentos</h3>
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#carouselExampleIndicators"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-          </ol>
-          <div class="carousel-inner row"></div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+    <section id="resultados">
+        <h1 class="col-12 justify-content-center">Resultados da busca</h1>
+        <div id="lista_filmes" class="row">
+          <!--Aqui entrarão os resultados de pesquisa-->
         </div>
-      </div>
-    </section>
-
-    <section id="destaque" class="destaque container">
-      <div class="row">
-        <h3 class="col-8">Em destaque</h3>
-        <div class="dropdown col-4">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Categoria
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Aventura</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Romance</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Comédia</a>
-          </div>
+          <div class="col-12 d-flex justify-content-end">
+            <button type="button" class="btn btn-warning botao-mais-conteudo" onclick="maisFilmes(event)">
+            <i class="fas fa-plus"></i>
+            Carregar mais resultados
+          </button>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 row destaque-card-group justify-content-center"></div>
-        <div class="col-12 d-flex justify-content-end">
-          <button type="button" class="btn btn-warning botao-mais-conteudo" onclick="maisFilmes(event)">
-          <i class="fas fa-plus"></i>
-          Carregar mais filmes
-        </button>
-      </div>
-      </div>
-    </section>
-
-    <section id="avaliacoes" class="avaliacoes container">
-      <div class="row">
-        <h3 class="col-12">Últimas avaliações</h3>
-        <div
-          class="card mb-3 col-12 col-sm-12 col-md-6 col-lg-4 card-avaliacao"
-          style="max-width: 540px"
-        >
-          <div class="row no-gutters">
-            <div class="col-2 col-md-1 col-lg-1">
-              <span><i class="far fa-user-circle fa-3x"></i></span>
-            </div>
-            <div class="col-10 col-md-11 col-lg-11">
-              <div class="card-body">
-                <h4 class="card-title">Nome do avaliador</h4>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <div class="row avaliacoes-rodape">
-                  <div class="col-5 col-sm-6 rating-stars">
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                  </div>
-                  <p class="data-avaliacoes col-5 col-sm-6">02/09/2020</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card mb-3 col-12 col-sm-12 col-md-6 col-lg-4 card-avaliacao"
-          style="max-width: 540px"
-        >
-          <div class="row no-gutters">
-            <div class="col-2 col-md-1 col-lg-1">
-              <i class="far fa-user-circle fa-3x"></i>
-            </div>
-            <div class="col-10 col-md-11 col-lg-11">
-              <div class="card-body">
-                <h4 class="card-title">Nome do avaliador</h4>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <div class="row avaliacoes-rodape">
-                  <div class="col-5 col-sm-6 rating-stars">
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                  </div>
-                  <p class="data-avaliacoes col-5 col-sm-6">02/09/2020</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card mb-3 col-12 col-sm-12 col-md-6 col-lg-4 card-avaliacao"
-          style="max-width: 540px"
-        >
-          <div class="row no-gutters">
-            <div class="col-2 col-md-1 col-lg-1">
-              <i class="far fa-user-circle fa-3x"></i>
-            </div>
-            <div class="col-10 col-md-11 col-lg-11">
-              <div class="card-body">
-                <h4 class="card-title">Nome do avaliador</h4>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <div class="row avaliacoes-rodape">
-                  <div class="col-5 col-sm-6 rating-stars">
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                    <span class="fa fa-star stars"></span>
-                  </div>
-                  <p class="data-avaliacoes col-5 col-sm-6">02/09/2020</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 d-flex justify-content-end">
-        <button type="button" class="btn btn-warning botao-mais-conteudo">
-          <i class="fas fa-plus"></i>
-          Carregar mais avaliações
-        </button>
-      </div>
-    </section>
-
-    <section id="making-of" class="making-of container">
-      <div class="row">
-        <h3 class="col-12">Entrevistas & Making-of</h3>
-        <div
-          class="card card-making-of col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
-        >
-          <iframe
-            src="https://www.youtube.com/embed/XKpnHmqJ6Lg"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <div class="card-body">
-            <p class="card-text">
-              Coringa | Entrevista com o Diretor Todd Phillips | Ingresso.com
-            </p>
-          </div>
-        </div>
-        <div
-          class="card card-making-of col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
-        >
-          <iframe
-            src="https://www.youtube.com/embed/oMkmjg-qZRk"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <div class="card-body">
-            <p class="card-text">
-              Batman | Behind The Scenes of The Dark Knight Trilogy | Warner
-              Bros. Entertainment
-            </p>
-          </div>
-        </div>
-        <div
-          class="card card-making-of col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
-        >
-          <iframe
-            src="https://www.youtube.com/embed/v-pi-bYAWxo"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-          <div class="card-body">
-            <p class="card-text">
-              The VFX Behind The Enola Holmes Train Sequence | Behind The FX |
-              Netflix Film Club
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 d-flex justify-content-end">
-        <button type="button" class="btn btn-warning botao-mais-conteudo">
-          <i class="fas fa-plus"></i>
-          Carregar mais vídeos
-        </button>
-      </div>
     </section>
 
     <section id="informativo" class="informativo container">
@@ -490,9 +267,9 @@
         Copyright 2020 - Disciplina de Desenvonvimento de Interfaces Web -
         <b>ICEI PUC Minas</b>
       </p>
-      <a href="https://pucminas.br">
-        <img src="res/brasaopucminas.png" alt="Brasão PUC Minas"/>
-      </a>
+      <a href="https://pucminas.br"
+        ><img src="res/brasaopucminas.png" alt="Brasão PUC Minas"
+      /></a>
     </footer>
 
     <script
@@ -507,6 +284,6 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="search-result.js"></script>
   </body>
 </html>
